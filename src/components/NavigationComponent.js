@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, NavLink} from "reactstrap";
+import {Link} from "react-scroll";
 // import { NavLink } from "react-router-dom"
 
 class Navigation extends Component {
@@ -29,9 +30,18 @@ class Navigation extends Component {
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                                 <NavItem>
-                                    <a className="nav-link raleway-medium" href="#header">
-                                        Home
-                                    </a>
+                                        <Link
+                                            activeClass="active"
+                                            to="header"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-55}
+                                            duration={500}
+                                        >
+                                            <a className="nav-link raleway-medium" href="#header">
+                                                Home
+                                            </a>
+                                        </Link>
                                 </NavItem>
 
                                 <NavItem>
